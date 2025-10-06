@@ -24,3 +24,68 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* === Animações suaves e modernas === */
+
+/* Fade-in sutil usado nos modais e mensagens */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out;
+}
+
+/* Brilho para destacar atualizações de valores */
+@keyframes glowPulse {
+  0% {
+    background-color: rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    background-color: rgba(255, 215, 0, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.animate-glow {
+  animation: glowPulse 1s ease-in-out;
+}
+
+/* Pulso sutil — útil para botões ou elementos ativos */
+@keyframes pulseSoft {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 1.5s ease-in-out infinite;
+}
+
+/* Fade rápido — ótimo para trocas de etapas */
+@keyframes fadeQuick {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-quick {
+  animation: fadeQuick 0.25s ease-in;
+}

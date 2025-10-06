@@ -10,19 +10,19 @@ const steps: Step[] = [
     number: 1,
     icon: 'gift',
     title: 'Escolha um Presente',
-    description: 'Navegue pela lista de presentes e escolha o que você gostaria de contribuir.'
+    description: 'Navegue pela lista de presentes e escolha com qual deles você gostaria de contribuir.'
   },
   {
     number: 2,
     icon: 'currency',
     title: 'Faça sua Contribuição',
-    description: 'Contribua com um presente ou ajude a bater a meta dos super presentes!'
+    description: 'E não esqueça de deixar uma mensagem para registrar sua participação no chá!'
   },
   {
     number: 3,
     icon: 'check',
     title: 'Acompanhe a Evolução',
-    description: 'Veja em tempo real a meta de cada presente progredindo.'
+    description: 'Veja em tempo real a meta de cada presente progredindo. Você faz parte disto!'
   }
 ];
 

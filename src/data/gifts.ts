@@ -15,7 +15,7 @@ export const gifts: Gift[] = [
   {
     id: '1',
     name: 'Kit de Utensílios de Cozinha',
-    image: '/images/kit-utensilios.jpg',
+    image: '/images/kit-utensilios.png',
     targetAmount: 50,
     raisedAmount: 0,
     supporters: 0,
@@ -26,24 +26,24 @@ export const gifts: Gift[] = [
   {
     id: '2',
     name: 'Torradeira Elétrica',
-    image: '/images/torradeira.jpg',
+    image: '/images/torradeira-ana.png',
     targetAmount: 100,
     raisedAmount: 0,
     supporters: 0,
-    description: 'Cafés da manhã com pão quentinho!',
+    description: 'Pão quentinho e torrado para a Ana!',
     isFixedPrice: true,
     fixedPrice: 100
   },
   {
     id: '3',
-    name: 'Liquidificador Elétrico',
-    image: '/images/liquidificador.jpg',
+    name: 'Presente da Nina',
+    image: '/images/nina-presente.png',
     targetAmount: 150,
     raisedAmount: 0,
     supporters: 0,
-    description: 'Para a nutri Ana fazer seus sucos saudáveis!',
+    description: 'Ela não pode ficar de fora dos presentes!',
     isFixedPrice: true,
-    fixedPrice: 150
+    fixedPrice: 75
   },
   // Produtos com meta de arrecadação
   {
