@@ -148,7 +148,7 @@ export default function ContributeModal({
               {["Pix", "Cartão", "Outro"].map((m) => (
                 <button
                   key={m}
-                  onClick={() => setPaymentMethod(m as any)}
+                  onClick={() => setPaymentMethod(m as "Pix" | "Cartão" | "Outro")}
                   className={`py-3 rounded-lg border-2 transition-all ${
                     paymentMethod === m
                       ? "bg-[#113C58] text-white border-[#113C58]"

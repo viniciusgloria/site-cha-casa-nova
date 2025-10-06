@@ -50,29 +50,29 @@ export const gifts: Gift[] = [
     id: '4',
     name: 'Televisão para Sala',
     image: '/images/tv.jpg',
-    targetAmount: 1699,
-    raisedAmount: 600,
-    supporters: 3,
+    targetAmount: 1999,
+    raisedAmount: 50,
+    supporters: 1,
     description: 'Essa é para a felicidade do Vini no dia a dia!',
     isFixedPrice: false
   },
   {
     id: '5',
-    name: 'Guarda-roupa do Casal',
+    name: 'Guarda-Roupas do Casal',
     image: '/images/armario.jpg',
     targetAmount: 1999,
-    raisedAmount: 200,
+    raisedAmount: 50,
     supporters: 1,
     description: 'Tem que ser espaçoso para evitar brigas!',
     isFixedPrice: false
   },
   {
     id: '6',
-    name: 'Ar Condicionado Quarto',
+    name: 'Ar-Condicionado do Quarto',
     image: '/images/ar-condicionado.jpg',
     targetAmount: 2199,
-    raisedAmount: 500,
-    supporters: 2,
+    raisedAmount: 50,
+    supporters: 1,
     description: 'Verão sem ar não é uma opção. Jesus amado!',
     isFixedPrice: false
   }

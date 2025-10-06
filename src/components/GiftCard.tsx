@@ -85,7 +85,7 @@ export default function GiftCard({ gift }: GiftCardProps) {
                 <div className="text-2xl font-bold text-amber-700 mb-1">
                   R$ {gift.fixedPrice?.toLocaleString("pt-BR")}
                 </div>
-                <div className="text-sm text-amber-600">Presente de valor fixo</div>
+                <div className="text-sm text-amber-600">Valor aproximado.</div>
               </div>
             </div>
           ) : (
@@ -110,7 +110,7 @@ export default function GiftCard({ gift }: GiftCardProps) {
 
               {lastDonor && (
                 <p className="text-xs text-gray-500 italic mb-3">
-                  Último apoio: {lastDonor} ({getElapsedTime(lastDate)})
+                  Última contribuição: {lastDonor} ({getElapsedTime(lastDate)})
                 </p>
               )}
             </>
