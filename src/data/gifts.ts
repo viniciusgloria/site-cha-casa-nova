@@ -1,13 +1,18 @@
+// src/data/gifts.ts
 export interface Gift {
   id: string;
   name: string;
   image: string;
-  targetAmount: number;
-  raisedAmount: number;
+  targetAmount: number;   // em reais
+  raisedAmount: number;   // em reais
   supporters: number;
   description: string;
   isFixedPrice: boolean;
   fixedPrice?: number;
+
+  // novos campos (opcionais)
+  lastContributorName?: string; // ex.: "Fernando"
+  lastContributionAt?: string;  // ex.: "2025-10-06T12:00:00-03:00"
 }
 
 export const gifts: Gift[] = [
@@ -21,7 +26,7 @@ export const gifts: Gift[] = [
     supporters: 0,
     description: 'Kit completo para o Vini preparar o jantar!',
     isFixedPrice: true,
-    fixedPrice: 50
+    fixedPrice: 50,
   },
   {
     id: '2',
@@ -32,7 +37,7 @@ export const gifts: Gift[] = [
     supporters: 0,
     description: 'Pão quentinho e torrado para a Ana!',
     isFixedPrice: true,
-    fixedPrice: 100
+    fixedPrice: 100,
   },
   {
     id: '3',
@@ -43,28 +48,31 @@ export const gifts: Gift[] = [
     supporters: 0,
     description: 'Ela não pode ficar de fora dos presentes!',
     isFixedPrice: true,
-    fixedPrice: 75
+    fixedPrice: 75,
   },
+
   // Produtos com meta de arrecadação
   {
     id: '4',
     name: 'Televisão para Sala',
     image: '/images/tv.jpg',
     targetAmount: 1999,
-    raisedAmount: 50,
+    raisedAmount: 100,          // mantém contribuição do Fernando
     supporters: 1,
     description: 'Essa é para a felicidade do Vini no dia a dia!',
-    isFixedPrice: false
+    isFixedPrice: false,
+    lastContributorName: 'Fernando',
+    lastContributionAt: '2025-10-06T12:00:00-03:00', // ajuste se quiser
   },
   {
     id: '5',
     name: 'Guarda-Roupas do Casal',
     image: '/images/armario.jpg',
     targetAmount: 1999,
-    raisedAmount: 50,
-    supporters: 1,
+    raisedAmount: 0,            // zerado
+    supporters: 0,              // zerado
     description: 'Tem que ser espaçoso para evitar brigas!',
-    isFixedPrice: false
+    isFixedPrice: false,
   },
   {
     id: '6',
@@ -74,6 +82,6 @@ export const gifts: Gift[] = [
     raisedAmount: 50,
     supporters: 1,
     description: 'Verão sem ar não é uma opção. Jesus amado!',
-    isFixedPrice: false
-  }
+    isFixedPrice: false,
+  },
 ];
