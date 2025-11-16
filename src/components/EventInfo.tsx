@@ -7,10 +7,10 @@ export default function EventInfo() {
   const handleAddToGoogleCalendar = () => {
     const title = encodeURIComponent("Chá de Casa Nova - Vini, Ana & Nina");
     const details = encodeURIComponent("Esperamos você para celebrar com a gente! 💛");
-    const location = encodeURIComponent("Rua Milão, 71 - Pagani, Palhoça - SC");
+    const location = encodeURIComponent("Rua Brasilpinho, 286 - Kobrasol, São José - SC");
     // Formato de data: YYYYMMDDTHHmmssZ — o “Z” indica UTC, então ajustamos -3h (Brasil)
-    const start = "20251108T150000Z"; // 12h00 BRT = 15h00 UTC
-    const end = "20251108T170000Z";   // 14h00 BRT = 17h00 UTC
+    const start = "20251122T150000Z"; // 12h00 BRT = 15h00 UTC
+    const end = "20251122T170000Z";   // 14h00 BRT = 17h00 UTC
 
     const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${details}&location=${location}`;
 
@@ -33,7 +33,9 @@ export default function EventInfo() {
               className="font-body text-lg hover:underline hover:text-amber-400 transition-colors text-left"
               title="Adicionar ao Google Calendar"
             >
-              08 de Novembro de 2025
+              22 de Novembro de 2025
+              <br />
+              <span className="text-sm text-white/80">Clique para adicionar a sua agenda!</span>
             </button>
           </div>
 
@@ -46,21 +48,25 @@ export default function EventInfo() {
           {/* 📍 Local */}
           <div className="flex items-center gap-3">
             <MapPinIcon className="w-6 h-6" />
-            <span className="font-body text-lg">Residencial Hipólito</span>
+            <span className="font-body text-lg">Residencial Ville de Luxembourg</span>
           </div>
 
           {/* 🗺️ Endereço (Waze) */}
-          <div className="flex items-center gap-3">
-            <MapIcon className="w-6 h-6" />
-            <a
-              href="https://ul.waze.com/ul?place=ChIJFY0C_x81J5URz3MQbGSxF0Y&ll=-27.63815800%2C-48.68677980&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-lg hover:underline hover:text-amber-400 transition-colors"
-            >
-              Rua Milão, 71 - Pagani, Palhoça - SC
-            </a>
-          </div>
+<div className="flex items-center gap-3">
+  <MapIcon className="w-6 h-6" />
+  <a
+    href="https://ul.waze.com/ul?place=ChIJ0ZSby95JJ5URREcdbuq69J8&ll=-27.59117620%2C-48.61401230&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-body text-lg hover:underline hover:text-amber-400 transition-colors"
+    title="Abrir no Waze"
+  >
+    <span className="block whitespace-nowrap">
+      Rua Brasilpinho, 286 – Kobrasol, São José – SC
+    </span>
+    <span className="block text-sm text-white/80">Clique para abrir no Waze!</span>
+  </a>
+</div>
         </div>
 
         <div className="text-center">
