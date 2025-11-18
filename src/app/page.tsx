@@ -29,7 +29,7 @@ export default function Home() {
           <h3 className="text-2xl font-bold text-white mb-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Image src="/images/nina.png" alt="Nina" width={240} height={240} className="w-24 h-24 sm:w-60 sm:h-60 object-cover" priority={false} />
             <span>
-              A Nina agradece a participação, esperamos todos vocês no dia 8 para celebrar esta nova fase!
+              A Nina agradece a participação, esperamos todos vocês no dia 22 para celebrar esta nova fase!
             </span>
           </h3>
         </div>

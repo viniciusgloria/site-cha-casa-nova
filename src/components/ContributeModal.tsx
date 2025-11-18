@@ -83,6 +83,19 @@ export default function ContributeModal({
       return;
     }
 
+    // Validação de limite de contribuição
+    if (paymentMethod !== "Outro") {
+      const numericValue = parseFloat(value);
+      if (isNaN(numericValue) || numericValue <= 0) {
+        setFeedback("Por favor, informe um valor válido.");
+        return;
+      }
+      if (numericValue > 500) {
+        setFeedback("O valor máximo de contribuição é R$ 500,00 por pessoa.");
+        return;
+      }
+    }
+
     await sendToSheet({
       method: paymentMethod,
       value: value || "",
@@ -202,14 +215,24 @@ export default function ContributeModal({
 
             {/* Campo de valor */}
             {!startAtMessage && paymentMethod !== "Outro" && (
-              <input
-                type="number"
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                placeholder="Valor da contribuição (ex: 100)"
-                className="w-full border rounded-lg px-3 py-2 mb-3 placeholder-gray-600"
-                readOnly={!!fixedValue} // 🆕 bloqueia o campo se for valor fixo
-              />
+              <>
+                <input
+                  type="number"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  placeholder="Valor da contribuição (ex: 100)"
+                  className="w-full border rounded-lg px-3 py-2 mb-1 placeholder-gray-600"
+                  readOnly={!!fixedValue} // 🆕 bloqueia o campo se for valor fixo
+                  min="1"
+                  max="500"
+                  step="0.01"
+                />
+                {!fixedValue && (
+                  <p className="text-xs text-gray-500 mb-3 text-left">
+                    Limite máximo: R$ 500,00 por pessoa
+                  </p>
+                )}
+              </>
             )}
 
             {/* Check: já contribuiu */}
